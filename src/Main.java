@@ -26,6 +26,7 @@ public class Main {
             System.out.println(" 2 = Barang");
             System.out.println(" 3 = Jumlah");
             System.out.println(" 4 = batal");
+            System.out.print("pilih menu: ");
             int menu=masuk.nextInt();
             String has = null;
             switch (menu){
@@ -99,7 +100,7 @@ public class Main {
         System.out.print("masukkan nama_barang :");
         String brng=masuk.next();
         System.out.print("masukkan jumlah_barang:");
-        String jml=masuk.next();
+        int jml=masuk.nextInt();
         String sql = "insert into transaksi(id,nama,barang,jumlah)" + "values('"+idI+"','"+nama+"','"+brng+"','"+jml+"')";
         return sql;
     }
@@ -144,7 +145,7 @@ public class Main {
                         break;
                     case 2:
                         stmt.execute(insert());
-//                        System.out.print("data berhasil di masukkan");
+                        System.out.print("data berhasil di masukkan");
                         break;
                     case 3:
                         stmt.execute(update());
